@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name </title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- Responsive Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">Name </div>
+    <div class="navbar-toggle" id="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="navbar-menu" id="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#occupation">Occupation</a></li>
+      <li><a href="#family-background">Family Background</a></li>
+      <li><a href="#requirements">Requirements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="header" id="profile">
+  <h1 class="title">Name PROFILE</h1>
+</header>
+
+<section class="profile">
+  <div class="photo-section">
+    <img src="./images/Name_1.jpg" alt="Profile Photo" class="profile-photo">
+  </div>
+  <div class="info-section">
+    <h2 class=“name">Name </h2>
+    <p class="bio">Age: 28 | Height: 5'6" | Religion: Hindu | BRAHMIN</p>
+    <p class="description">
+      I am a software engineer with a passion for sports and travel. Looking for a life partner who is caring, family-oriented, and enjoys exploring new cultures.
+    </p>
+  </div>
+</section>
+
+<section class="images" id="photos">
+  <h3 class="section-title">Photos</h3>
+  <div class="image-frame">
+    <img src="./images/Image_1.jpg" alt="Gallery Image 1" class="gallery-image active">
+    <img src="./images/Image_2.jpg" alt="Gallery Image 2" class="gallery-image">
+    <img src="./images/Image_3.jpg" alt="Gallery Image 3" class="gallery-image">
+    <img src="./images/Image_4.jpg" alt="Gallery Image 4" class="gallery-image">
+    <img src="./images/Image_5.jpg" alt="Gallery Image 5" class="gallery-image">
+  </div>
+  <button class="prev-button" onclick="showPrevImage()">&#10094;</button>
+  <button class="next-button" onclick="showNextImage()">&#10095;</button>
+</section>
+
+<section class="details" id="details">
+  <h3 class="section-title">Details</h3>
+  <ul class="details-list">
+    <li><span><b>Education:</b></span> Bachelor of Engineering from <a href="https://www.kletech.ac.in/" target="_blank">
+      B.V.B
+      <img src="./images/BVB_Logo.jpeg" alt="BVB Logo" style="width: 40px; height: 30px; margin-left: 5px;">
+    </a></li>
+    <li><span><b>Occupation:</b></span> Senior Software Engineer at  <a href="" target="_blank">
+      Company_name
+      <img src="./images/" alt="Logo" style="width: 100px; height: 20px; margin-left: 5px;">
+    </a></li>
+    <li><span><b>Income:</b></span> </li>
+    <li><span><b>Family Background:</b></span> Well-settled middle class family</li>
+    <li><span><b>Hobbies:</b></span> Badminton, Cricket, Table tennis,Traveling</li>
+  </ul>
+</section>
+
+<section class="occupation" id="occupation">
+  <h3 class="section-title">Occupation</h3>
+  <ul class="details-list">
+    <li><b>Position: </b>Senior Software Engineer</li>
+    <li><b>Company:</b>
+      <a href="" target="_blank">
+        Company_name
+        <img src="./images/" alt="Logo" style="width: 50px; height: 50px; margin-left: 5px;">
+      </a>
+    </li>
+    <li><b>Industry:</b> Software Engineering</li>
+    <li><b>Experience:</b> 6 years in software development</li>
+  </ul>
+</section>
+
+<section class="family-background" id="family-background">
+  <h3 class="section-title">Family Background</h3>
+  <ul class="details-list">
+    <li><b>Father:</b> </li>
+    <li><b>Mother:</b> </li>
+    <li><b>Siblings:</b> </li>
+    <li><b>Family Values:</b> </li>
+    <li><b>Location:</b> </li>
+  </ul>
+</section>
+
+<section class="requirements" id="requirements">
+  <h3 class="section-title">Requirements</h3>
+  <ul class="details-list">
+    <li><b>Age:</b> </li>
+    <li><b>Height:</b> </li>
+    <li><b>Education:</b> </li>
+    <li><b>Occupation:</b> </li>
+    <li><b>Personality:</b> </li>
+  </ul>
+</section>
+
+<div class="contact" id="contact">
+  <h3 class="section-title">Contact Information</h3>
+
+  <!-- Father Flip Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h4>Father</h4>
+      </div>
+      <div class="flip-card-back">
+        <p><b>Email:</b> example@gmail.com</p>
+        <p><b>Phone:</b> 9876543210</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mother Flip Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h4>Mother</h4>
+      </div>
+      <div class="flip-card-back">
+        <p><b>Email:</b> example@gmail.com</p>
+        <p><b>Phone:</b> 9876543210</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('active'); // Toggle active class
+      navLinks.classList.toggle('active'); // Toggle visibility
+    });
+
+    navLinks.addEventListener('mouseleave', function () {
+      hamburger.classList.remove('active'); // Remove active class
+      navLinks.classList.remove('active'); // Hide nav links
+    });
+
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll(".gallery-image");
+    const intervalTime = 2000; // Set interval time in milliseconds
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+      });
+    }
+
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      showImage(currentImageIndex);
+    }
+
+    function showPrevImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      showImage(currentImageIndex);
+    }
+
+    // Auto-slide to the next image every few seconds
+    setInterval(showNextImage, intervalTime);
+
+    // Initialize gallery to show only the first image on load
+    showImage(currentImageIndex);
+
+    // Add event listeners for the navigation buttons
+    document.querySelector('.next-button').addEventListener('click', showNextImage);
+    document.querySelector('.prev-button').addEventListener('click', showPrevImage);
+
+    const flipCards = document.querySelectorAll('.flip-card');
+
+    flipCards.forEach(card => {
+      card.addEventListener('click', function () {
+        this.querySelector('.flip-card-inner').classList.toggle('flipped');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

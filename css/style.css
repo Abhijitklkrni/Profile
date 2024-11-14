@@ -1,0 +1,397 @@
+
+  /* Resetting basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #6773c7;
+  padding: 0 1rem;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #f7f8fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #007aff;
+}
+
+/* Hamburger Icon Styling */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s;
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f7f8fa;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Images Section Styling */
+.images {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  position: relative;
+}
+
+.image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-image {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+  display: none; /* Ensures non-active images are hidden */
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  object-fit: contain;
+}
+
+.gallery-image.active {
+  opacity: 1;
+  display: block; /* Shows only the active image */
+}
+
+/* Navigation Button Styling */
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Profile section styling */
+.profile {
+  display: flex;
+  max-width: 900px;
+  margin: 3rem auto;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.photo-section {
+  flex: 1;
+  padding: 2rem;
+}
+
+.profile-photo {
+  width: 100%;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.info-section {
+  flex: 2;
+  padding: 2rem;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.bio {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.description {
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+
+/* Tile section styling */
+.details, .occupation, .family-background, .requirements, .contact {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.details-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.details-list li {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  text-align: left;
+}
+
+/* Tile Hover Effect */
+.profile:hover, .details:hover, .occupation:hover, .family-background:hover, .requirements:hover, .contact:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section Styling */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Customize Flip Card Effect */
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.flip-card-back {
+  background-color: #223e6b;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 20px;
+}
+
+/* Responsive Navbar Styling */
+@media (max-width: 768px) {
+  /* Hide the menu and display hamburger icon on small screens */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #f7f8fa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+  /* Show the menu when the active class is added */
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  /* Profile Section in Column Layout */
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .photo-section, .info-section {
+    padding: 1.5rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .bio, .description {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .details-list li {
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .profile-photo {
+    width: 80%;
+  }
+
+  .name {
+    font-size: 1.6rem;
+  }
+
+  .bio, .description {
+    font-size: 0.9rem;
+  }
+
+  .details-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
