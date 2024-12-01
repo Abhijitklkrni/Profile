@@ -159,6 +159,10 @@ body {
   overflow: hidden;
   flex-direction: row;
 }
+  .password-prompt {
+    text-align: center;
+    margin-top: 50px;
+  }
 
 .photo-section {
   flex: 1;
@@ -292,7 +296,7 @@ body {
 }
 
 .flip-card-back {
-  background-color: #223e6b;
+  background-color: #b4b7bc;
   color: white;
   transform: rotateY(180deg);
   display: flex;
@@ -389,6 +393,7 @@ body {
   .details-list li {
     font-size: 0.9rem;
   }
+
 }
 
 /* Smooth Scroll */

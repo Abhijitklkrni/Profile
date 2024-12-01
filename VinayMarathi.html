@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>विनय सांबरेकर</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- प्रतिसादक्षम नेव्हिगेशन बार -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">विनय सांबरेकर</div>
+    <div class="navbar-toggle" id="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="navbar-menu" id="nav-links">
+      <li><a href="#profile">प्रोफाइल</a></li>
+      <li><a href="#photos">फोटो</a></li>
+      <li><a href="#details">तपशील</a></li>
+      <li><a href="#requirements">आवश्यकता</a></li>
+      <li><a href="#contact">संपर्क</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="header" id="profile">
+  ॥ श्री गजानन प्रसन्न ॥
+  ॥ श्री कामाक्षी प्रसन्न ॥
+  <h1 class="title">विनय बायोडाटा</h1>
+</header>
+
+<section class="profile">
+  <div class="photo-section">
+    <img src="./images/Vinay/vinay_main.jpg" alt="प्रोफाइल फोटो" class="profile-photo">
+  </div>
+  <div class="info-section">
+    <h2 class="name">नाव: विनय सांबरेकर</h2>
+    <p class="bio">वय: 29 | उंची: 5' 7" | धर्म: हिंदू | हिंदू दैवज्ञ सोनार</p>
+    <p class="description">
+      मी टीसीएस मध्ये सॉफ्टवेअर इंजिनियर म्हणून काम करतो. जरी माझी प्रगतीशील मानसिकता असली तरी मला आपल्या मूल्ये आणि परंपरांचा खूप आदर आहे. आदर, विश्वास आणि मैत्रीच्या मजबूत पायावर नाते निर्माण करण्यावर विश्वास ठेवणारी व्यक्ती माझ्यासाठी योग्य असेल.
+    </p>
+  </div>
+</section>
+
+<!-- पासवर्ड प्रॉम्प्ट -->
+<div id="password-prompt" class="password-prompt">
+  <h1>फोटो पाहण्यासाठी पासवर्ड प्रविष्ट करा</h1>
+  <input type="password" id="password-input" placeholder="पासवर्ड प्रविष्ट करा">
+  <button onclick="checkPassword()">सबमिट</button>
+  <p id="error-message" style="color: red; display: none;">चुकीचा पासवर्ड</p>
+</div>
+
+<!-- फोटो विभाग -->
+<section class="images" id="photos" style="display: none;">
+  <h3 class="section-title">फोटो</h3>
+  <div class="image-frame">
+    <img src="./images/Vinay/vinay_new1.jpg" alt="विनय फोटो 1" class="gallery-image active">
+    <img src="./images/Vinay/vinay_new2.jpg" alt="विनय फोटो 2" class="gallery-image">
+    <img src="./images/Vinay/vinay_new3.jpg" alt="विनय फोटो 3" class="gallery-image">
+    <img src="./images/Vinay/vinay_new4.jpg" alt="विनय फोटो 4" class="gallery-image">
+    <img src="./images/Vinay/vinay_new5.jpg" alt="विनय फोटो 5" class="gallery-image">
+    <img src="./images/Vinay/vinay_new6.jpg" alt="विनय फोटो 6" class="gallery-image">
+  </div>
+  <button class="prev-button" onclick="showPrevImage()">&#10094;</button>
+  <button class="next-button" onclick="showNextImage()">&#10095;</button>
+</section>
+
+<section class="details" id="details">
+  <h3 class="section-title">तपशील</h3>
+  <ul class="details-list">
+    <li><span><b>जन्मतारीख:</b></span> 06/10/1995, 5.30pm</li>
+    <li><span><b>गोत्र:</b></span> कौशिक</li>
+    <li><span><b>राशी, नक्षत्र, आणि नाडी:</b></span> कुंभ राशी - प.भद्रपदा - आध्या नाडी</li>
+    <li><span><b>शिक्षण:</b></span> <a href="https://www.kletech.ac.in/" target="_blank">बी.व्ही.बी</a> मधून अभियांत्रिकी पदवी</li>
+    <li><span><b>व्यवसाय:</b></span> <a href="https://www.tcs.com/" target="_blank">टाटा कन्सल्टन्सी सर्व्हिसेस</a> मध्ये सॉफ्टवेअर इंजिनियर</li>
+    <li><span><b>कौटुंबिक पार्श्वभूमी:</b></span> 4 भावंडे: मोठा भाऊ आणि बहीण मुंबई आणि पुण्यात स्थायिक आहेत. लहान भावंडे मूळ गाव बीजापूर येथे राहतात आणि कौटुंबिक व्यवसायाची काळजी घेतात.</li>
+    <li><span><b>छंद:</b></span> प्रवास आणि मैदानी खेळ</li>
+  </ul>
+</section>
+
+<section class="requirements" id="requirements">
+  <h3 class="section-title">आवश्यकता</h3>
+  <ul class="details-list">
+    <li><b>वय: 23 - 29</b></li>
+    <li><b>उंची: 4' 8'' ते 5' 8''</b></li>
+    <li><b>शिक्षण: कोणतीही पदवी</b></li>
+    <li><b>व्यवसाय: कोणताही </b></li>
+    <li><b>व्यक्तिमत्व: आदर, विश्वास आणि मैत्रीच्या मजबूत पायावर नाते निर्माण करण्यावर विश्वास ठेवणारी व्यक्ती</b></li>
+  </ul>
+</section>
+
+<div class="contact" id="contact">
+  <h3 class="section-title">संपर्क माहिती</h3>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h4>संपर्क1</h4>
+      </div>
+      <div class="flip-card-back">
+        <p><b>नाव:</b> राधिका सांबरेकर</p>
+        <p><b>फोन:</b> 9620207430</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h4>संपर्क2</h4>
+      </div>
+      <div class="flip-card-back">
+        <p><b>नाव:</b> उज्वला शिरोडकर</p>
+        <p><b>फोन:</b> 6362569394</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.addEventListener('mouseleave', function () {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll(".gallery-image");
+    const intervalTime = 2000;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+      });
+    }
+
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      showImage(currentImageIndex);
+    }
+
+    function showPrevImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      showImage(currentImageIndex);
+    }
+
+    setInterval(showNextImage, intervalTime);
+    showImage(currentImageIndex);
+
+    document.querySelector('.next-button').addEventListener('click', showNextImage);
+    document.querySelector('.prev-button').addEventListener('click', showPrevImage);
+
+    const flipCards = document.querySelectorAll('.flip-card');
+
+    flipCards.forEach(card => {
+      card.addEventListener('click', function () {
+        this.querySelector('.flip-card-inner').classList.toggle('flipped');
+      });
+    });
+
+  });
+
+  function checkPassword() {
+    const password = document.getElementById('password-input').value;
+    const correctPassword = 'vinay';
+    const photosSection = document.getElementById('photos');
+    const errorMessage = document.getElementById('error-message');
+
+    if (password === correctPassword) {
+      photosSection.style.display = 'block';
+      document.getElementById('password-prompt').style.display = 'none';
+    } else {
+      errorMessage.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>

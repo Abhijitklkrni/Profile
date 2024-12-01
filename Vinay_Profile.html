@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinay Sambrekar </title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- Responsive Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">VINAY SAMBREKAR </div>
+    <div class="navbar-toggle" id="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="navbar-menu" id="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#requirements">Requirements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="header" id="profile">
+  ॥ श्री गजानन प्रसन्न ॥
+  ॥ श्री कामाक्षी प्रसन्न ॥
+  <h1 class="title">VINAY BIO DATA</h1>
+</header>
+
+<section class="profile">
+  <div class="photo-section">
+    <img src="./images/Vinay/vinay_main.jpg" alt="Profile Photo" class="profile-photo">
+  </div>
+  <div class="info-section">
+    <h2 class=“name">Name : Name Vinay Sambrekar </h2>
+    <p class="bio">Age:29  | Height: 5' 7" | Religion: HINDU | Hindu Daivadnya Sonar</p>
+    <p class="description">
+      I am working as Software Engineer in TCS. Although I have a progressive mindset,
+      I have immense respect for our values & tradition. Looking for someone who believes in building a relationship with a strong foundation of respect,
+      trust & friendship would be perfect for me.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Password Prompt -->
+  <div id="password-prompt" class="password-prompt">
+    <h1>Enter Password to View Photos </h1>
+    <input type="password" id="password-input" placeholder="Enter Password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="error-message" style="color: red; display: none;">Incorrect Password</p>
+  </div>
+
+
+
+<!-- Photos Section  style="display: none;"-->
+<section class="images" id="photos" style="display: none;">
+  <h3 class="section-title">Photos</h3>
+  <div class="image-frame">
+    <img src="./images/Vinay/vinay_new1.jpg" alt="Vinay Image 1" class="gallery-image active">
+    <img src="./images/Vinay/vinay_new2.jpg" alt="Vinay Image 2" class="gallery-image">
+    <img src="./images/Vinay/vinay_new3.jpg" alt="Vinay Image 3" class="gallery-image">
+    <img src="./images/Vinay/vinay_new4.jpg" alt="Vinay Image 4" class="gallery-image">
+    <img src="./images/Vinay/vinay_new5.jpg" alt="Vinay Image 5" class="gallery-image">
+    <img src="./images/Vinay/vinay_new6.jpg" alt="Vinay Image 6" class="gallery-image">
+  </div>
+  <button class="prev-button" onclick="showPrevImage()">&#10094;</button>
+  <button class="next-button" onclick="showNextImage()">&#10095;</button>
+</section>
+
+<section class="details" id="details">
+  <h3 class="section-title">Details</h3>
+  <ul class="details-list">
+    <li><span><b>Date of Birth:</b></span> 06/10/1995, 5.30pm</li>
+    <li><span><b>Gothra:</b></span> Kaushik</li>
+    <li><span><b>Rashi, Nakshatra, & Nadi:</b></span> Kumbh rashi - P.Bhadrapada -  Aadhya nadi</li>
+    <li><span><b>Education:</b></span> Bachelor of Engineering from <a href="https://www.kletech.ac.in/" target="_blank">
+      B.V.B
+      <img src="./images/BVB_Logo.jpeg" alt="College Logo" style="width: 40px; height: 30px; margin-left: 5px;">
+    </a></li>
+    <li><span><b>Occupation:</b></span> Software Engineer at <a href="https://www.tcs.com/" target="_blank">
+      Tata Consultancy Services
+      <img src="./images/tcs_logo.png" alt="Logo" style="width: 100px; height: 40px; margin-left: 5px;">
+    </a></li>
+    <!--<li><span><b>Income:</b></span> </li>-->
+    <li><span><b>Family Background:</b> 4 siblings: Elder brother and sister are settled in Mumbai and Pune, respectively.
+      Younger siblings are residing at native Bijapur, and they take care of the family business.</span></li>
+    <li><span><b>Hobbies:</b> Travelling and Outdoor sports</span> </li>
+  </ul>
+</section>
+
+
+<section class="requirements" id="requirements" >
+  <h3 class="section-title">Expectations</h3>
+  <ul class="details-list">
+    <li><b>Age: 23 - 29</b> </li>
+    <li><b>Height: 4' 8'' to 5' 8''</b> </li>
+    <li><b>Education: Any degree</b> </li>
+    <li><b>Occupation: Any </b> </li>
+    <li><b>Personality: Someone who believes in building a relationship with a strong foundation of respect, trust & friendship</b> </li>
+  </ul>
+</section>
+
+<div class="contact" id="contact">
+  <h3 class="section-title">Contact Information</h3>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h4>Contact1</h4>
+      </div>
+      <div class="flip-card-back">
+        <p><b>Name:</b> Radhika Sambrekar</p>
+        <p><b>Phone:</b> 9620207430</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h4>Contact2</h4>
+      </div>
+      <div class="flip-card-back">
+        <p><b>Name:</b> Ujawala Shirodkar</p>
+        <p><b>Phone:</b> 6362569394</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('active'); // Toggle active class
+      navLinks.classList.toggle('active'); // Toggle visibility
+    });
+
+    navLinks.addEventListener('mouseleave', function () {
+      hamburger.classList.remove('active'); // Remove active class
+      navLinks.classList.remove('active'); // Hide nav links
+    });
+
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll(".gallery-image");
+    const intervalTime = 2000; // Set interval time in milliseconds
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+      });
+    }
+
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      showImage(currentImageIndex);
+    }
+
+    function showPrevImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      showImage(currentImageIndex);
+    }
+
+    // Auto-slide to the next image every few seconds
+    setInterval(showNextImage, intervalTime);
+
+    // Initialize gallery to show only the first image on load
+    showImage(currentImageIndex);
+
+    // Add event listeners for the navigation buttons
+    document.querySelector('.next-button').addEventListener('click', showNextImage);
+    document.querySelector('.prev-button').addEventListener('click', showPrevImage);
+
+    const flipCards = document.querySelectorAll('.flip-card');
+
+    flipCards.forEach(card => {
+      card.addEventListener('click', function () {
+        this.querySelector('.flip-card-inner').classList.toggle('flipped');
+      });
+    });
+
+  });
+
+  function checkPassword() {
+    const password = document.getElementById('password-input').value;
+    const correctPassword = 'vinay'; // Set your password here
+    const photosSection = document.getElementById('photos');
+    /*const detailsSection = document.getElementById('details');
+    const occupationSection = document.getElementById('occupation');
+    const requirementsSection = document.getElementById('requirements');*/
+    const errorMessage = document.getElementById('error-message');
+
+    if (password === correctPassword) {
+      photosSection.style.display = 'block';
+     /* detailsSection.style.display = 'block';
+      occupationSection.style.display = 'block';
+      requirementsSection.style.display = 'block';*/
+      document.getElementById('password-prompt').style.display = 'none';
+    } else {
+      errorMessage.style.display = 'block';
+    }
+  }
+</script>
+
+
+</body>
+</html>
